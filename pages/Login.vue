@@ -1,7 +1,8 @@
     <template>
     <v-container>
         <v-row>
-            <v-col cols="2" style="margin-top: 12px; margin-left: 18px"><span>{{ userName }}</span></v-col>
+            <v-col cols="2" style="margin-top: 12px; margin-left: 18px">
+                <span>{{ userName }}</span></v-col>
 
 
             <v-col cols="4" style="margin-left: -118px">

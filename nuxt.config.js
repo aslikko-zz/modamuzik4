@@ -42,15 +42,16 @@ export default {
     [
       '@nuxtjs/firebase',
       {
-        config: {
+        config : {
           apiKey: "AIzaSyD09x2ZD8scGla2ptG5xPvOfQUSREcnOL8",
-    authDomain: "modamuzik-661b4.firebaseapp.com",
-    projectId: "modamuzik-661b4",
-    storageBucket: "modamuzik-661b4.appspot.com",
-    messagingSenderId: "779366645548",
-    appId: "1:779366645548:web:704d9f6c389ee567b4b689"
+          authDomain: "modamuzik-661b4.firebaseapp.com",
+          projectId: "modamuzik-661b4",
+          storageBucket: "modamuzik-661b4.appspot.com",
+          messagingSenderId: "779366645548",
+          appId: "1:779366645548:web:704d9f6c389ee567b4b689"
   
         },
+        
         services: {
           auth: true,
   firestore: true,
@@ -66,7 +67,7 @@ export default {
     ]
  ],
  
-
+ 
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
@@ -115,3 +116,4 @@ export default {
   build: {
   }
 }
+

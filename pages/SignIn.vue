@@ -11,11 +11,7 @@
         </v-row>
         <v-row>
             <v-col cols="4" style="margin-left: -10px">
-                <v-textarea
-                        solo
-                        name="input-7-4"
-                        height="5"
-                ></v-textarea>
+                <input type="email" v-model="email" placeholder="Email" >
             </v-col>
         </v-row>
         <v-row style="margin-top: -30px">
@@ -23,11 +19,7 @@
         </v-row>
         <v-row>
             <v-col cols="4" style="margin-left: -10px">
-                <v-textarea
-                        solo
-                        name="input-7-4"
-                        height="5"
-                ></v-textarea>
+               <input type="password" v-model="password" placeholder="Password">
             </v-col>
         </v-row>
         <v-row style="margin-top: -55px; margin-left: 120px">
@@ -54,8 +46,30 @@
 
 <script>
     export default {
-        name: "SignIn"
-    }
+       
+        name: "SignIn",
+              
+        data() {
+            return {
+                email: "",
+                password: ""
+                
+      }
+ },
+ methods: {
+     login() {
+         firebase.auth().signInWithEmailAndPassword(this.email, this.password).then(
+             user=> {
+                 alert('Oturum ok')
+             },
+             err=>{
+                 alert('Hata'+ err)
+             }
+         );
+     }
+     
+ },
+}
 </script>
 
 <style scoped>
